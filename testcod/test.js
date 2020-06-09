@@ -200,3 +200,50 @@ const getSortedUniqueSkills = users => {
 };
 
 console.log(getSortedUniqueSkills(users));
+
+function sayText(from, text) {
+  return 'from' + text;
+}
+sayText('asya', 'poks');
+
+// function checkAge(age) {
+//   if (age > 18) {
+//     alert('доступ получен');
+//   } else alert('доступ запрещен');
+// }
+// let age = prompt('cskolko let');
+// if (checkAge(age)) {
+//   alert('dostup est');
+// } else alert('dostupa net');
+
+// pow(3, 2) = 3 * 3 = 9
+// pow(3, 3) = 3 * 3 * 3 = 27
+// pow(1, 100) = 1 * 1 * ...* 1 = 1
+
+function pows(x, n) {
+  return console.log(x ** n);
+}
+pows(3, 3);
+
+// function sayHi() {
+//   alert('Привет');
+// }
+
+// console.log(sayHi());
+
+// Напиши скрипт имитирующий авторизацию администратора в панели управления.
+
+// Есть переменная message в которую будет записано сообщение о результате. При загрузке страницы у посетителя запрашивается пароль через prompt:
+
+// Если нажали Cancel, записать в message строку 'Отменено пользователем!'
+// В протовном случае, если введен пароль который совпадает со значением константы ADMIN_PASSWORD, записать в message строку 'Добро пожаловать!'
+// В противном случае, то есть если ни одно из предыдущих условий не выполнилось, записать в message строку 'Доступ запрещен, неверный пароль!'
+// После всех проверок вывести в alert значение переменной message.
+
+const ADMIN_PASSWORD = 'jqueryismyjam';
+let message = prompt('vvedite parol');
+if (message === ADMIN_PASSWORD) {
+  alert('super');
+} else if (message == null || message == '') {
+  alert('hernya');
+} else alert('hernya parol');
