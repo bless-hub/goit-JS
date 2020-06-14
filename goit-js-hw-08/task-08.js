@@ -54,7 +54,7 @@ function closeKeyModal(e) {
   }
 }
 function closeModalClick(e) {
-  if (e.target) {
+  if (e.target === refs.lightboxContent) {
     closeModal();
   }
 }
