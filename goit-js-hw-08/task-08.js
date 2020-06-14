@@ -53,7 +53,13 @@ function closeKeyModal(e) {
     closeModal();
   }
 }
+function closeModalClick(e) {
+  if (e.target) {
+    closeModal();
+  }
+}
 
 refs.list.addEventListener('click', openModal);
 refs.lightBoxBtn.addEventListener('click', closeModal);
 window.addEventListener('keyup', closeKeyModal);
+refs.lightboxContent.addEventListener('click', closeModalClick);
