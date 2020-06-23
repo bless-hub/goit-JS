@@ -8,6 +8,13 @@ const refs = {
   themeLocalStorage: localStorage.getItem('theme'),
 };
 
+if (refs.themeLocalStorage === Theme.DARK) {
+  refs.switchTheme.checked = true;
+  refs.body.setAttribute('class', Theme.DARK);
+} else {
+  refs.body.setAttribute('class', Theme.LIGHT);
+}
+
 const darkTheme = () => {
   refs.body.classList.remove(Theme.LIGHT);
   refs.body.classList.add(Theme.DARK);
@@ -18,15 +25,6 @@ const lightTheme = () => {
   refs.body.classList.remove(Theme.DARK);
   refs.body.classList.add(Theme.LIGHT);
   localStorage.setItem('theme', Theme.LIGHT);
-};
-
-const saveLocalStorage = () => {
-  if (refs.themeLocalStorage === Theme.DARK) {
-    refs.switchTheme.checked = true;
-    refs.body.setAttribute('class', Theme.DARK);
-  } else {
-    refs.body.setAttribute('class', Theme.LIGHT);
-  }
 };
 
 const checkedTarget = e => {
